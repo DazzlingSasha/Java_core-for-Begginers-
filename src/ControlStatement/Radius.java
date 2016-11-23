@@ -19,14 +19,20 @@ public class Radius {
         scanner.close();
 
         Radius countRadius1 = new Radius(radius1);
+        countRadius1.plowa();
         Radius countRadius2 = new Radius(radius2);
-
-        System.out.println("Radius of first circle is: " + countRadius1);
-        System.out.println("Radius of second circle is: " + countRadius2);
+        countRadius2.plowa();
+        
+        System.out.println("Radius of first circle is: " + countRadius1.getRadius());
+        System.out.println("Radius of second circle is: " + countRadius2.getRadius());
     }
 
     public Radius (Double radius) {
-        this.radius = PI * radius * radius;
+        this.radius = radius;
+    }
+    
+    public double plowa(){
+        return PI * radius * radius;
     }
 
     public double getRadius() {
